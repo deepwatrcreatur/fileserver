@@ -1,0 +1,9 @@
+[Unit]
+Description=Check drive temperatures and upload to Grafana Cloud
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/drive_temp.sh
+User=root  # Use 'root' if smartctl needs sudo; otherwise, specify a user with appropriate permissions

@@ -1,0 +1,10 @@
+[Unit]
+Description=Run drive temperature check every minute
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+Persistent=true
+Unit=drive-temp.service
+
+[Install]
+WantedBy=timers.target
